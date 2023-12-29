@@ -52,5 +52,5 @@
 ```az batch account show -g myresourcegroup -n mybatchaccount```
 
 # **Application Management**
-### Create a new application
+#### Create a new application
 ```az batch application create --resource-group myresourcegroup --name mybatchaccount --application-id myapp --display-name "My Application"```
