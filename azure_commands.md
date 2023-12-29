@@ -1,7 +1,7 @@
 # **Download the Azure CLI on Windows**
 #### Downloading and Installing the Azure CLI
 ```Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi```
-#### Invoke the MSI installer suppressing all output
+#### Invoke the MSI installer to suppress all output
 ```Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'```
 #### Remove the MSI installer
 ```Remove-Item -Path .\AzureCLI.msi```
@@ -23,7 +23,6 @@
 ```az vm create --resource-group labrg-1137911 --name myVM-1137911 --image Ubuntu2204 --generate-ssh-keys```
 #### Create a Windows VM
 ```az vm create --resource-group myResourceGroup --name myVM --image win2016datacenter```
-
 #### Create a Storage account.
 ```az storage account create -g myresourcegroup -n mystorageaccount -l eastus --sku Standard_LRS```
 
@@ -40,11 +39,11 @@
 ```az vm redeploy --resource-group myResourceGroup --name myVM```
 #### Delete a VM
 ```az vm delete --resource-group labrg-xxxx --name myVM-xxxx```
-#### Create image of a VM
+#### Create an image of a VM
 ```az image create --resource-group myResourceGroup --source myVM --name myImage```
 #### Create a Storage account.
 ```az storage account create -g myresourcegroup -n mystorageaccount -l eastus --sku Standard_LRS```
-#### Associate Batch with storage account.
+#### Associate Batch with a storage account.
 ```az batch account set -g myresourcegroup -n mybatchaccount --storage-account mystorageaccount```
 #### Authenticate directly against the account for further CLI interaction
 ```az batch account login -g myresourcegroup -n mybatchaccount```
