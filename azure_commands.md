@@ -1,10 +1,13 @@
 # **Download the Azure CLI on Windows**
 #### Downloading and Installing the Azure CLI
-```Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi```
-#### Invoke the MSI installer to suppress all output
-```Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'```
+```Invoke-WebRequest -Uri https://aka.ms/installazurecliwindowsx64 -OutFile .\AzureCLI-x64.msi```
+or
+```$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindowsx64 -OutFile .\AzureCLI-x64.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI-x64.msi /quiet'; Remove-Item .\AzureCLI-x64.msi```
+
+#### Invoke the MSI installer suppressing all output
+```Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI-x64.msi /quiet'```
 #### Remove the MSI installer
-```Remove-Item -Path .\AzureCLI.msi```
+```Remove-Item -Path .\AzureCLI-x64.msi```
 
 # **Azure Login and Subscription Information**
 #### Login in CLI
