@@ -44,8 +44,6 @@ or
 ```az vm delete --resource-group labrg-xxxx --name myVM-xxxx```
 #### Create an image of a VM
 ```az image create --resource-group myResourceGroup --source myVM --name myImage```
-#### Create a Storage account.
-```az storage account create -g myresourcegroup -n mystorageaccount -l eastus --sku Standard_LRS```
 #### Associate Batch with a storage account.
 ```az batch account set -g myresourcegroup -n mybatchaccount --storage-account mystorageaccount```
 #### Authenticate directly against the account for further CLI interaction
