@@ -1,4 +1,4 @@
-# **Download the Azure CLI on Windows**
+# **Download the Azure CLI on Windows and Install**
 #### Downloading and Installing the Azure CLI
 ```Invoke-WebRequest -Uri https://aka.ms/installazurecliwindowsx64 -OutFile .\AzureCLI-x64.msi```
 or
